@@ -11,19 +11,6 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import DataProvider.ExcelDataProvider;
-import Factory.BrowserFactory;
-import Pages.ActivateAccountPage;
-import Pages.AfterLoggedInPage;
-import Pages.AlmostDonePopUp;
-import Pages.CommonHeader;
-import Pages.CreateAnAccountPage;
-import Pages.SignUpPage;
-import ReUse.AuthoriseMailMailinator;
-import ReUse.SendMail;
-import Utility.CaptureScreenshot;
-import Utility.GetNewEmail;
-import Utility.RandomStringGenerator;
 
 public class TestCase5 
 {
