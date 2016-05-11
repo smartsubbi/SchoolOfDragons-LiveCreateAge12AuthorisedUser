@@ -87,11 +87,11 @@ public class TestCase5
 		String userName = RandomStringGenerator.generateRandomString();
 		String emailAddress = GetNewEmail.getNewEmail(userName);		
 		createAnAccountPage.enterEmail(emailAddress);
-		logger.log(LogStatus.INFO, "Enter Email address");		
+		logger.log(LogStatus.INFO, "Enter Email address : "+emailAddress);		
 		createAnAccountPage.enterUserName(userName);
-		logger.log(LogStatus.INFO, "Enter Username");		
+		logger.log(LogStatus.INFO, "Enter Username : "+userName);		
 		createAnAccountPage.enterPassword("123456");
-		logger.log(LogStatus.INFO, "Enter Password");		
+		logger.log(LogStatus.INFO, "Enter Password : 123456");		
 		String createAnAccountPageAfterEnteringAllDetailsScreenshot=logger.addScreenCapture(CaptureScreenshot.takeScreenshot(driver, "Application"));
 		logger.log(LogStatus.INFO, createAnAccountPageAfterEnteringAllDetailsScreenshot);		
 		createAnAccountPage.clickFinishAndPlayButton();		
@@ -111,8 +111,9 @@ public class TestCase5
 		count = count +1;		
 		ExcelDataProvider excel = new ExcelDataProvider();		
         driver.get("http://mailinator.com");
-        AuthoriseMailMailinator.autoriseMail(userName,driver);        
-        Thread.sleep(5000);        
+        AuthoriseMailMailinator.autoriseMail(userName,driver,logger);        
+        Thread.sleep(5000);   
+        logger.log(LogStatus.INFO, "Clicked on the Authorisation for the username : "+userName);
 		ActivateAccountPage activateAccountPage = PageFactory.initElements(driver, ActivateAccountPage.class);
 		activateAccountPage.verifyEmailID(emailAddress);
 		activateAccountPage.enterPassword("123456");
