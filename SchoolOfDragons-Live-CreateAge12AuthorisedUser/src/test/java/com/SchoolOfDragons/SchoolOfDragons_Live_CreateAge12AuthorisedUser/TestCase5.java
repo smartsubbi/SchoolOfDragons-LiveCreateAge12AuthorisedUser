@@ -137,11 +137,12 @@ public class TestCase5
 		logger.log(LogStatus.INFO, "Quitting the Browser Opened");			
 		if(count==1)
 		{
-			WebDriver driver = BrowserFactory.getBrowser("chrome");		
+		//	WebDriver driver = BrowserFactory.getBrowser("chrome");		
 			String emailReportPathToSend = ExtentManager.finalPath;
 			String mailContent = "There are issues authorising the user You can refer to the below report for the run result\n"+emailReportPathToSend+"\nBelow are the details of the non authorised user created : \n";
 			excel.writeToNextFreeCell(2,0,userName);		
 			excel.writetoexcel();
+			System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"No");
 			System.out.println("=====================================================================");
 			System.out.println("Created Age 12 Player (Not Authorised User) is : "+userName);
@@ -160,11 +161,12 @@ public class TestCase5
 		}
 		else if(count==2)
 		{
-			WebDriver driver = BrowserFactory.getBrowser("chrome");	
+		//	WebDriver driver = BrowserFactory.getBrowser("chrome");	
 			String emailReportPathToSend = ExtentManager.finalPath;
 			String mailContent = "Authorised user has been created.\n\nYou can refer to the below report for the run result\n"+emailReportPathToSend+"\nBelow are the details of the Authorised user created : \n";
 			excel.writeToNextFreeCell(3,0,userName);		
 			excel.writetoexcel();
+			System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"Yes");		
 			System.out.println("=====================================================================");
 			System.out.println("Created Age 12 Player (Authorized User) is : "+userName);
@@ -182,13 +184,17 @@ public class TestCase5
 		}
 		else if (count==0)
 		{
-			WebDriver driver = BrowserFactory.getBrowser("chrome");		
+		//	WebDriver driver = BrowserFactory.getBrowser("chrome");		
 			String emailReportPathToSend = ExtentManager.finalPath;
 			String mailContent = "User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend;
-			SendMail.sendMail(driver,subject,mailContent,"Not Created","Not Created","Not Created","Not Created","Not Created");
+			System.out.println(mailContent);
+			//SendMail.sendMail(driver,subject,mailContent,"Not Created","Not Created","Not Created","Not Created","Not Created");
 			System.out.println("=====================================================================");
 			System.out.println("User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend);				
-			System.out.println("=====================================================================");			
+			System.out.println("=====================================================================");	
+			logger.log(LogStatus.INFO,"=====================================================================");
+			logger.log(LogStatus.INFO,"User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend);				
+			logger.log(LogStatus.INFO,"=====================================================================");	
 		}
 		BrowserFactory.closeBrowser();
 	}
