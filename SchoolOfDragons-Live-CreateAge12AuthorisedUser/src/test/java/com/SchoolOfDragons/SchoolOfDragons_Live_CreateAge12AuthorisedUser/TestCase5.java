@@ -71,9 +71,9 @@ public class TestCase5
 		signUpPage.selectAge(age);
 		logger.log(LogStatus.INFO, "Select age 12");		
 		signUpPage.selectedAgeElementValidation(age);
-		logger.log(LogStatus.INFO, "Verify if age selected is 12");		
+		//logger.log(LogStatus.INFO, "Verify if age selected is 12");		
 		signUpPage.confirmButtonEnabledElementValidation();
-		logger.log(LogStatus.INFO, "Verify if the confirm button is enabled");		
+		logger.log(LogStatus.INFO, "Verify if the age selected is 12 and confirm button is enabled");		
 		String signUpPageAfterAgeSelection=logger.addScreenCapture(CaptureScreenshot.takeScreenshot(driver, "Application"));
 		logger.log(LogStatus.INFO, signUpPageAfterAgeSelection);		
 		signUpPage.clickConfirmButton();
