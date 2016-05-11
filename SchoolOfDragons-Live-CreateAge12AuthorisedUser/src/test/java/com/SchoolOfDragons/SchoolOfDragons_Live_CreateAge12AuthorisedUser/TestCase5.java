@@ -55,14 +55,14 @@ public class TestCase5
 		driver.get("http://www.schoolofdragons.com");		
 		logger.log(LogStatus.INFO, "Entered Authentication credentials successfully and Url is Loading");			
 		CommonHeader header = PageFactory.initElements(driver, CommonHeader.class);		
-		logger.log(LogStatus.INFO, "Home Page Title is verified");
+		
 		String homePageScreenshot=logger.addScreenCapture(CaptureScreenshot.takeScreenshot(driver, "Application"));
 		logger.log(LogStatus.INFO, homePageScreenshot);				
 		header.clickHeaderCreateAnAccountLink();
 		logger.log(LogStatus.INFO, "Clicked the Create an Account Link on the Homepage header");		
 		Thread.sleep(5000);		
 		SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);		
-		logger.log(LogStatus.INFO, "Sign Up Page Title is verified");		
+			
 		String signUpPageScreenshot=logger.addScreenCapture(CaptureScreenshot.takeScreenshot(driver, "Application"));
 		logger.log(LogStatus.INFO, signUpPageScreenshot);		
 		signUpPage.confirmButtonDisabledElementValidation();
@@ -79,11 +79,11 @@ public class TestCase5
 		logger.log(LogStatus.INFO, "Click on the Confirm Button");		
 		Thread.sleep(5000);		
 		CreateAnAccountPage createAnAccountPage = PageFactory.initElements(driver, CreateAnAccountPage.class);		
-		logger.log(LogStatus.INFO, "Create an account Page Title is verified");
+	
 		String createAnAccountPageScreenshot=logger.addScreenCapture(CaptureScreenshot.takeScreenshot(driver, "Application"));
 		logger.log(LogStatus.INFO, createAnAccountPageScreenshot);		
 		createAnAccountPage.selectedAgeElementValidation(age);
-		logger.log(LogStatus.INFO, "Verify is age selected is 12");		
+		logger.log(LogStatus.INFO, "Verify if age selected is 12");		
 		String userName = RandomStringGenerator.generateRandomString();
 		String emailAddress = GetNewEmail.getNewEmail(userName);		
 		createAnAccountPage.enterEmail(emailAddress);
