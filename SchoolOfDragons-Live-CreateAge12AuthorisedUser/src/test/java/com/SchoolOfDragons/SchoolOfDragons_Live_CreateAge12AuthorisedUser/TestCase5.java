@@ -144,8 +144,14 @@ public class TestCase5
 			System.out.println("=====================================================================");
 			System.out.println("Created Age 12 Player (Not Authorised User) is : "+userName);
 			System.out.println("Created Age 12 Player (Not Authorised User) password is : 123456");
-			System.out.println("Created Age 12 Player (Not Authorised User) email id is : "+emailAddress);			
+			System.out.println("Created Age 12 Player (Not Authorised User) email id is : "+emailAddress);
+			System.out.println("The report can be found here : "+emailReportPathToSend);
 			System.out.println("=====================================================================");
+			logger.log(LogStatus.INFO,"=====================================================================");
+			logger.log(LogStatus.INFO,"Created Age 12 Player (Not Authorised User) is : "+userName);
+			logger.log(LogStatus.INFO,"Created Age 12 Player (Not Authorised User) password is : 123456");
+			logger.log(LogStatus.INFO,"Created Age 12 Player (Not Authorised User) email id is : "+emailAddress);			
+			logger.log(LogStatus.INFO,"=====================================================================");
 		}
 		else if(count==2)
 		{
@@ -158,8 +164,14 @@ public class TestCase5
 			System.out.println("=====================================================================");
 			System.out.println("Created Age 12 Player (Authorized User) is : "+userName);
 			System.out.println("Created Age 12 Player (Authorized User) password is : 123456");
-			System.out.println("Created Age 12 Player (Authorized User) email id is : "+emailAddress);			
+			System.out.println("Created Age 12 Player (Authorized User) email id is : "+emailAddress);	
+			System.out.println("The report can be found here : "+emailReportPathToSend);
 			System.out.println("=====================================================================");
+			logger.log(LogStatus.INFO,"=====================================================================");
+			logger.log(LogStatus.INFO,"Created Age 12 Player (Not Authorised User) is : "+userName);
+			logger.log(LogStatus.INFO,"Created Age 12 Player (Not Authorised User) password is : 123456");
+			logger.log(LogStatus.INFO,"Created Age 12 Player (Not Authorised User) email id is : "+emailAddress);			
+			logger.log(LogStatus.INFO,"=====================================================================");
 		}
 		else if (count==0)
 		{
