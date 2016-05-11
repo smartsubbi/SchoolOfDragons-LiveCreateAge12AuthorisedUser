@@ -140,7 +140,12 @@ public class TestCase5
 			String mailContent = "There are issues authorising the user You can refer to the below report for the run result\n"+emailReportPathToSend+"\nBelow are the details of the non authorised user created : \n";
 			excel.writeToNextFreeCell(2,0,userName);		
 			excel.writetoexcel();
-			SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"No");
+			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"No");
+			System.out.println("=====================================================================");
+			System.out.println("Created Age 12 Player (Not Authorised User) is : "+userName);
+			System.out.println("Created Age 12 Player (Not Authorised User) password is : 123456");
+			System.out.println("Created Age 12 Player (Not Authorised User) email id is : "+emailAddress);			
+			System.out.println("=====================================================================");
 		}
 		else if(count==2)
 		{
@@ -149,7 +154,12 @@ public class TestCase5
 			String mailContent = "Authorised user has been created.\n\nYou can refer to the below report for the run result\n"+emailReportPathToSend+"\nBelow are the details of the Authorised user created : \n";
 			excel.writeToNextFreeCell(3,0,userName);		
 			excel.writetoexcel();
-			SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"Yes");			
+			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"Yes");		
+			System.out.println("=====================================================================");
+			System.out.println("Created Age 12 Player (Authorized User) is : "+userName);
+			System.out.println("Created Age 12 Player (Authorized User) password is : 123456");
+			System.out.println("Created Age 12 Player (Authorized User) email id is : "+emailAddress);			
+			System.out.println("=====================================================================");
 		}
 		else if (count==0)
 		{
@@ -157,7 +167,9 @@ public class TestCase5
 			String emailReportPathToSend = ExtentManager.finalPath;
 			String mailContent = "User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend;
 			SendMail.sendMail(driver,subject,mailContent,"Not Created","Not Created","Not Created","Not Created","Not Created");
-			
+			System.out.println("=====================================================================");
+			System.out.println("User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend);				
+			System.out.println("=====================================================================");			
 		}
 		BrowserFactory.closeBrowser();
 	}
