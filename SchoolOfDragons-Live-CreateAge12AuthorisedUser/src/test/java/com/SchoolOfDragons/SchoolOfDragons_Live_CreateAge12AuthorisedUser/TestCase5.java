@@ -48,7 +48,7 @@ public class TestCase5
 	{
 		logger = report.startTest("Test Case 5: School Of Dragons - Live - Create Age 12 Player (Authorized User) ","This will verify if user can create an Authorized user with age 12").assignCategory("none");
 		
-		driver = BrowserFactory.getBrowser("chrome");
+		driver = BrowserFactory.getBrowser("firefox");
 		logger.log(LogStatus.INFO, "Browser is up and running");
 		String browserOpenedScreenshot=logger.addScreenCapture(CaptureScreenshot.takeScreenshot(driver, "browserOpenedScreenshot"));
 		logger.log(LogStatus.INFO, browserOpenedScreenshot);		
