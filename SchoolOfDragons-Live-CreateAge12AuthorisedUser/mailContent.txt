@@ -1,0 +1,7 @@
+===================================================
+Created Age 12 Player (Authorized User) is : EuCenEUubhahI4Y
+Created Age 12 Player (Authorized User) password is : 123456
+Created Age 12 Player (Authorized User) email id is : EuCenEUubhahI4Y@mailinator.com
+The report can be found here : \\172.20.11.105\MyGitProjects\SchoolOfDragons-LiveCreateAge12AuthorisedUser\SchoolOfDragons-Live-CreateAge12AuthorisedUser\ExtentReports\SchoolOfDragonsLive_Thu.May.2016_17.17.37[PM].html
+Path to the Excel file : file://172.20.11.105/Usernames%20Excels/
+===================================================

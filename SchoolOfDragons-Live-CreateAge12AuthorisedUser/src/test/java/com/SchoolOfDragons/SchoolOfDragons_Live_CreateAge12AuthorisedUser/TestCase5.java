@@ -23,6 +23,7 @@ import ReUse.AuthoriseMailMailinator;
 import Utility.CaptureScreenshot;
 import Utility.GetNewEmail;
 import Utility.RandomStringGenerator;
+import ReUse.writeToTextFile;
 
 public class TestCase5 
 {
@@ -165,7 +166,14 @@ public class TestCase5
 			excel.writeToNextFreeCell(3,0,userName);		
 			excel.writetoexcel();
 			System.out.println(mailContent);
-			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"Yes");		
+			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"Yes");	
+			
+			String Line2 = "Created Age 12 Player (Authorized User) is : "+userName;
+			String Line3 = "Created Age 12 Player (Authorized User) password is : 123456";
+			String Line4 = "Created Age 12 Player (Authorized User) email id is : "+emailAddress;
+			String Line5 = "The report can be found here : "+emailReportPathToSend;
+			String Line6 = "Path to the Excel file : "+pathToExcel;
+			
 			System.out.println("=====================================================================");
 			System.out.println("Created Age 12 Player (Authorized User) is : "+userName);
 			System.out.println("Created Age 12 Player (Authorized User) password is : 123456");
@@ -178,7 +186,8 @@ public class TestCase5
 			logger.log(LogStatus.INFO,"Created Age 12 Player (Authorized User) password is : 123456");
 			logger.log(LogStatus.INFO,"Created Age 12 Player (Authorized User) email id is : "+emailAddress);	
 			logger.log(LogStatus.INFO,"Path to the Excel file : "+pathToExcel);
-			logger.log(LogStatus.INFO,"=====================================================================");			
+			logger.log(LogStatus.INFO,"=====================================================================");
+			writeToTextFile.writeToTempTextFile(Line2, Line3, Line4, Line5, Line6);
 		}
 		else if (count==0)
 		{

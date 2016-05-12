@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Live Test Cases Suite" duration-ms="105717" started-at="2016-05-11T09:26:37Z" finished-at="2016-05-11T09:28:23Z">
+  <suite name="Live Test Cases Suite" duration-ms="126456" started-at="2016-05-12T11:47:37Z" finished-at="2016-05-12T11:49:43Z">
     <groups>
     </groups>
-    <test name="Live Tests" duration-ms="105717" started-at="2016-05-11T09:26:37Z" finished-at="2016-05-11T09:28:23Z">
+    <test name="Live Tests" duration-ms="126456" started-at="2016-05-12T11:47:37Z" finished-at="2016-05-12T11:49:43Z">
       <class name="com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5@4cc0edeb]" name="setUp" is-config="true" duration-ms="172" started-at="2016-05-11T14:56:37Z" finished-at="2016-05-11T14:56:37Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5@4cc0edeb]" name="setUp" is-config="true" duration-ms="110" started-at="2016-05-12T17:17:37Z" finished-at="2016-05-12T17:17:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createNewUserAge12()[pri:0, instance:com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5@4cc0edeb]" name="createNewUserAge12" duration-ms="105283" started-at="2016-05-11T14:56:37Z" finished-at="2016-05-11T14:58:22Z">
+        <test-method status="PASS" signature="createNewUserAge12()[pri:0, instance:com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5@4cc0edeb]" name="createNewUserAge12" duration-ms="126088" started-at="2016-05-12T17:17:37Z" finished-at="2016-05-12T17:19:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewUserAge12 -->
-        <test-method status="PASS" signature="afterTest(org.testng.ITestResult)[pri:0, instance:com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5@4cc0edeb]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-05-11T14:58:22Z" finished-at="2016-05-11T14:58:22Z">
+        <test-method status="PASS" signature="afterTest(org.testng.ITestResult)[pri:0, instance:com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5@4cc0edeb]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-05-12T17:19:43Z" finished-at="2016-05-12T17:19:43Z">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5@4cc0edeb]" name="tearDown" is-config="true" duration-ms="259" started-at="2016-05-11T14:58:22Z" finished-at="2016-05-11T14:58:23Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser.TestCase5@4cc0edeb]" name="tearDown" is-config="true" duration-ms="235" started-at="2016-05-12T17:19:43Z" finished-at="2016-05-12T17:19:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
