@@ -48,7 +48,7 @@ public class TestCase5
 	{
 		logger = report.startTest("Test Case 5: School Of Dragons - Live - Create Age 12 Player (Authorized User) ","This will verify if user can create an Authorized user with age 12").assignCategory("none");
 		
-		driver = BrowserFactory.getBrowser("chrome");
+		driver = BrowserFactory.getBrowser("firefox");
 		logger.log(LogStatus.INFO, "Browser is up and running");
 		String browserOpenedScreenshot=logger.addScreenCapture(CaptureScreenshot.takeScreenshot(driver, "browserOpenedScreenshot"));
 		logger.log(LogStatus.INFO, browserOpenedScreenshot);		
@@ -148,9 +148,9 @@ public class TestCase5
 			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"No");
 			
 			String Line1 = mailContent;
-			String Line2 = "Created Age 12 Player (Authorized User) is : "+userName;
-			String Line3 = "Created Age 12 Player (Authorized User) password is : 123456";
-			String Line4 = "Created Age 12 Player (Authorized User) email id is : "+emailAddress;
+			String Line2 = "Created Age 12 Player (Not Authorized User) is : "+userName;
+			String Line3 = "Created Age 12 Player (Not Authorized User) password is : 123456";
+			String Line4 = "Created Age 12 Player (Not Authorized User) email id is : "+emailAddress;
 			String Line5 = "The report can be found here : "+emailReportPathToSend;
 			String Line6 = "Path to the Excel file : "+pathToExcel;
 			
