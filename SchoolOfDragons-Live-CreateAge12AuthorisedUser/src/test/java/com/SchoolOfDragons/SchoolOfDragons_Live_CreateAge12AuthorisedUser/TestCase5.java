@@ -1,5 +1,7 @@
 package com.SchoolOfDragons.SchoolOfDragons_Live_CreateAge12AuthorisedUser;
 
+import java.net.InetAddress;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
@@ -32,7 +34,7 @@ public class TestCase5
 	ExtentTest logger;	
 	String age = "12";
 	int count = 0;
-	String pathToExcel = "file://172.20.11.105/Usernames%20Excels/";
+	
 	
 	String subject = "Create Age 12 Player (Authorized User)";
 	
@@ -133,7 +135,10 @@ public class TestCase5
 		logger.log(LogStatus.INFO, ThankYouForActivatingPageScreenshot);			
 		count = count+1;		
 		BrowserFactory.closeBrowser();		
-		logger.log(LogStatus.INFO, "Quitting the Browser Opened");			
+		logger.log(LogStatus.INFO, "Quitting the Browser Opened");	
+		InetAddress address = InetAddress.getLocalHost(); 
+		String hostIP = address.getHostAddress();	 	    
+		String pathToExcel = "file://"+hostIP+"/Usernames%20Excels/";
 		if(count==1)
 		{
 		//	WebDriver driver = BrowserFactory.getBrowser("chrome");		
