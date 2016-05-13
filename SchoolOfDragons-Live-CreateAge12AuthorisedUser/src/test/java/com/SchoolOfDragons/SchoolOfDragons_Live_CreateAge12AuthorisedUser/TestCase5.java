@@ -33,9 +33,7 @@ public class TestCase5
 	ExtentReports report;
 	ExtentTest logger;	
 	String age = "12";
-	int count = 0;
-	
-	
+	int count = 0;	
 	String subject = "Create Age 12 Player (Authorized User)";
 	
 	@BeforeClass
@@ -143,11 +141,19 @@ public class TestCase5
 		{
 		//	WebDriver driver = BrowserFactory.getBrowser("chrome");		
 			String emailReportPathToSend = ExtentManager.finalPath;
-			String mailContent = "There are issues authorising the user You can refer to the below report for the run result\n"+emailReportPathToSend+"\nBelow are the details of the non authorised user created : \n";
+			String mailContent = "There are issues authorising the user, please refer to the report mentioned below. Below are the details of the non Authorised user created : ";
 			excel.writeToNextFreeCell(2,0,userName);		
 			excel.writetoexcel();
 			//System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"No");
+			
+			String Line1 = mailContent;
+			String Line2 = "Created Age 12 Player (Authorized User) is : "+userName;
+			String Line3 = "Created Age 12 Player (Authorized User) password is : 123456";
+			String Line4 = "Created Age 12 Player (Authorized User) email id is : "+emailAddress;
+			String Line5 = "The report can be found here : "+emailReportPathToSend;
+			String Line6 = "Path to the Excel file : "+pathToExcel;
+			
 			System.out.println("=====================================================================");
 			System.out.println("Created Age 12 Player (Not Authorised User) is : "+userName);
 			System.out.println("Created Age 12 Player (Not Authorised User) password is : 123456");
@@ -155,6 +161,7 @@ public class TestCase5
 			System.out.println("The report can be found here : "+emailReportPathToSend);
 			System.out.println("Path to the Excel file : "+pathToExcel);
 			System.out.println("=====================================================================");
+			
 			logger.log(LogStatus.INFO,"=====================================================================");
 			logger.log(LogStatus.INFO,"Created Age 12 Player (Not Authorised User) is : "+userName);
 			logger.log(LogStatus.INFO,"Created Age 12 Player (Not Authorised User) password is : 123456");
@@ -162,17 +169,20 @@ public class TestCase5
 			logger.log(LogStatus.INFO,"The report can be found here : "+emailReportPathToSend);
 			logger.log(LogStatus.INFO,"Path to the Excel file : "+pathToExcel);
 			logger.log(LogStatus.INFO,"=====================================================================");
+			
+			writeToTextFile.writeToTempTextFile(Line1, Line2, Line3, Line4, Line5, Line6);
 		}
 		else if(count==2)
 		{
 		//	WebDriver driver = BrowserFactory.getBrowser("chrome");	
 			String emailReportPathToSend = ExtentManager.finalPath;
-			String mailContent = "Authorised user has been created.\n\nYou can refer to the below report for the run result\n"+emailReportPathToSend+"\nBelow are the details of the Authorised user created : \n";
+			String mailContent = "Authorised user has been created. You can refer to the below report for the run result. Below are the details of the Authorised user created : ";
 			excel.writeToNextFreeCell(3,0,userName);		
 			excel.writetoexcel();
 			System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"Yes");	
 			
+			String Line1 = mailContent;
 			String Line2 = "Created Age 12 Player (Authorized User) is : "+userName;
 			String Line3 = "Created Age 12 Player (Authorized User) password is : 123456";
 			String Line4 = "Created Age 12 Player (Authorized User) email id is : "+emailAddress;
@@ -186,19 +196,21 @@ public class TestCase5
 			System.out.println("The report can be found here : "+emailReportPathToSend);
 			System.out.println("Path to the Excel file : "+pathToExcel);
 			System.out.println("=====================================================================");
+			
 			logger.log(LogStatus.INFO,"=====================================================================");
 			logger.log(LogStatus.INFO,"Created Age 12 Player (Authorized User) is : "+userName);
 			logger.log(LogStatus.INFO,"Created Age 12 Player (Authorized User) password is : 123456");
 			logger.log(LogStatus.INFO,"Created Age 12 Player (Authorized User) email id is : "+emailAddress);	
 			logger.log(LogStatus.INFO,"Path to the Excel file : "+pathToExcel);
 			logger.log(LogStatus.INFO,"=====================================================================");
-			writeToTextFile.writeToTempTextFile(Line2, Line3, Line4, Line5, Line6);
+			
+			writeToTextFile.writeToTempTextFile(Line1, Line2, Line3, Line4, Line5, Line6);
 		}
 		else if (count==0)
 		{
 		//	WebDriver driver = BrowserFactory.getBrowser("chrome");		
 			String emailReportPathToSend = ExtentManager.finalPath;
-			String mailContent = "User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend;
+			//String mailContent = "User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend;
 			//System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,"Not Created","Not Created","Not Created","Not Created","Not Created");
 			System.out.println("=====================================================================");
