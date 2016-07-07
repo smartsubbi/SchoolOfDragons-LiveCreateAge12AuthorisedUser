@@ -203,7 +203,7 @@ public class TestCase5
 			
 			//String Line1 = mailContent;
 			
-			String textInBold = "Java_Prof_Level";
+			String textInBold = "\033[0;1m" +"Java_Prof_Level";
 			System.out.print("\033[0;1m" + textInBold);
 			
 			String emailReportPathToSend = ExtentManager.finalPath1;
@@ -240,7 +240,7 @@ public class TestCase5
 			        "\n\n "+Line3+
 			        "\n\n "+Line4+
 			   //     "\n\n "+Line5+
-			        "\n\n "+Line6;
+			        "\n\n "+Line6+textInBold;
 			String mailSubject = "School Of Dragons - Live - Create Age 12 Player (Authorized User)";
 			SendMailSSL.sendMail(mailContent, mailSubject);	
 			
