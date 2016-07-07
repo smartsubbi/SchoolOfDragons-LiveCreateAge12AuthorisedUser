@@ -203,6 +203,9 @@ public class TestCase5
 			
 			//String Line1 = mailContent;
 			
+			String textInBold = "Java_Prof_Level";
+			System.out.print("\033[0;1m" + textInBold);
+			
 			String emailReportPathToSend = ExtentManager.finalPath1;
 			emailReportPathToSend = "<file:"+emailReportPathToSend+"SchoolOfDragonsLive_"+ExtentManager.fileDate+".html>";		
 			System.out.println("Path to Report "+emailReportPathToSend);
