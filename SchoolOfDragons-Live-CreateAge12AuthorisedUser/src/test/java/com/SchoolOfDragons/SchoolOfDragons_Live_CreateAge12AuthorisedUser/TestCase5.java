@@ -231,7 +231,7 @@ public class TestCase5
             String mailContent ="You can refer to the below report path for the run result : (Please use Internet Explorer / Mozilla firefox / Google Chrome to view the report) \n"+emailReportPathToSend+
 					
 					"\n\n ========================================================================================================"+
-					"\n\n \033[32m \033[0;1m Authorised user has been created."+" You can refer to the below report for the run result. Below are the details of the Authorised user created : "+
+					"\n\n <p><font color='green'><b>Authorised user has been created.</b></p>"+" You can refer to the below report for the run result. Below are the details of the Authorised user created : "+
 					"\n\n ========================================================================================================"+
 					"\n\n "+Line2+
 			        "\n\n "+Line3+
