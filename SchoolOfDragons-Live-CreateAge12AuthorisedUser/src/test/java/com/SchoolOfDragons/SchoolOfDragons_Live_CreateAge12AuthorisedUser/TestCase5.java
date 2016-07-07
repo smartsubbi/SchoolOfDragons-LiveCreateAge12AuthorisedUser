@@ -184,7 +184,7 @@ public class TestCase5
 					"\n\n "+Line2+
 			        "\n\n "+Line3+
 			        "\n\n "+Line4+
-			        "\n\n "+Line5+
+			//        "\n\n "+Line5+
 			        "\n\n "+Line6;
 			String mailSubject = "School Of Dragons - Live - Create Age 12 Player (Authorized User)";
 			SendMailSSL.sendMail(mailContent, mailSubject);	
@@ -236,7 +236,7 @@ public class TestCase5
 					"\n\n "+Line2+
 			        "\n\n "+Line3+
 			        "\n\n "+Line4+
-			        "\n\n "+Line5+
+			   //     "\n\n "+Line5+
 			        "\n\n "+Line6;
 			String mailSubject = "School Of Dragons - Live - Create Age 12 Player (Authorized User)";
 			SendMailSSL.sendMail(mailContent, mailSubject);	
