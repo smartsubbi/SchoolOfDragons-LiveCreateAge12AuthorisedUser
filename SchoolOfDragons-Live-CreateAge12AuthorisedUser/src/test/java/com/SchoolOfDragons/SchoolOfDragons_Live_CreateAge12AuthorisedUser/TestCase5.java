@@ -22,10 +22,10 @@ import Pages.CommonHeader;
 import Pages.CreateAnAccountPage;
 import Pages.SignUpPage;
 import ReUse.AuthoriseMailMailinator;
+import ReUse.SendMailSSL;
 import Utility.CaptureScreenshot;
 import Utility.GetNewEmail;
 import Utility.RandomStringGenerator;
-import ReUse.writeToTextFile;
 
 public class TestCase5 
 {
@@ -140,14 +140,19 @@ public class TestCase5
 		if(count==1)
 		{
 		//	WebDriver driver = BrowserFactory.getBrowser("chrome");		
-			String emailReportPathToSend = ExtentManager.finalPath;
-			String mailContent = "There are issues authorising the user, please refer to the report mentioned below. Below are the details of the non Authorised user created : ";
+			//String emailReportPathToSend = ExtentManager.finalPath;
+			//String mailContent = "There are issues authorising the user, please refer to the report mentioned below. Below are the details of the non Authorised user created : ";
 			excel.writeToNextFreeCell(2,0,userName);		
 			excel.writetoexcel();
 			//System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"No");
 			
-			String Line1 = mailContent;
+			//String Line1 = mailContent;
+			
+			String emailReportPathToSend = ExtentManager.finalPath1;
+			emailReportPathToSend = "<file:"+emailReportPathToSend+"SchoolOfDragonsLive_"+ExtentManager.fileDate+".html>";		
+			System.out.println("Path to Report "+emailReportPathToSend);
+			
 			String Line2 = "Created Age 12 Player (Not Authorized User) is : "+userName;
 			String Line3 = "Created Age 12 Player (Not Authorized User) password is : 123456";
 			String Line4 = "Created Age 12 Player (Not Authorized User) email id is : "+emailAddress;
@@ -170,19 +175,38 @@ public class TestCase5
 			logger.log(LogStatus.INFO,"Path to the Excel file : "+pathToExcel);
 			logger.log(LogStatus.INFO,"=====================================================================");
 			
-			writeToTextFile.writeToTempTextFile(Line1, Line2, Line3, Line4, Line5, Line6);
+			
+			String mailContent ="You can refer to the below report path for the run result : (Please use Internet Explorer / Mozilla firefox / Google Chrome to view the report) \n"+emailReportPathToSend+
+					
+					"\n\n ========================================================================================================"+
+					"\n\n There are issues authorising the user, please refer to the report mentioned below. Below are the details of the non Authorised user created : "+
+					"\n ========================================================================================================"+
+					"\n\n "+Line2+
+			        "\n\n "+Line3+
+			        "\n\n "+Line4+
+			        "\n\n "+Line5+
+			        "\n\n "+Line6;
+			String mailSubject = "School Of Dragons - Live - Create Age 12 Player (Authorized User)";
+			SendMailSSL.sendMail(mailContent, mailSubject);	
+			
+			//writeToTextFile.writeToTempTextFile(Line1, Line2, Line3, Line4, Line5, Line6);
 		}
 		else if(count==2)
 		{
 		//	WebDriver driver = BrowserFactory.getBrowser("chrome");	
-			String emailReportPathToSend = ExtentManager.finalPath;
-			String mailContent = "Authorised user has been created. You can refer to the below report for the run result. Below are the details of the Authorised user created : ";
+			//String emailReportPathToSend = ExtentManager.finalPath;
+		//	String mailContent = "Authorised user has been created. You can refer to the below report for the run result. Below are the details of the Authorised user created : ";
 			excel.writeToNextFreeCell(3,0,userName);		
 			excel.writetoexcel();
-			System.out.println(mailContent);
+			//System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,age,userName,"123456",emailAddress,"Yes");	
 			
-			String Line1 = mailContent;
+			//String Line1 = mailContent;
+			
+			String emailReportPathToSend = ExtentManager.finalPath1;
+			emailReportPathToSend = "<file:"+emailReportPathToSend+"SchoolOfDragonsLive_"+ExtentManager.fileDate+".html>";		
+			System.out.println("Path to Report "+emailReportPathToSend);
+			
 			String Line2 = "Created Age 12 Player (Authorized User) is : "+userName;
 			String Line3 = "Created Age 12 Player (Authorized User) password is : 123456";
 			String Line4 = "Created Age 12 Player (Authorized User) email id is : "+emailAddress;
@@ -204,12 +228,26 @@ public class TestCase5
 			logger.log(LogStatus.INFO,"Path to the Excel file : "+pathToExcel);
 			logger.log(LogStatus.INFO,"=====================================================================");
 			
-			writeToTextFile.writeToTempTextFile(Line1, Line2, Line3, Line4, Line5, Line6);
+            String mailContent ="You can refer to the below report path for the run result : (Please use Internet Explorer / Mozilla firefox / Google Chrome to view the report) \n"+emailReportPathToSend+
+					
+					"\n\n ========================================================================================================"+
+					"\n\n Authorised user has been created. You can refer to the below report for the run result. Below are the details of the Authorised user created : "+
+					"\n ========================================================================================================"+
+					"\n\n "+Line2+
+			        "\n\n "+Line3+
+			        "\n\n "+Line4+
+			        "\n\n "+Line5+
+			        "\n\n "+Line6;
+			String mailSubject = "School Of Dragons - Live - Create Age 12 Player (Authorized User)";
+			SendMailSSL.sendMail(mailContent, mailSubject);	
+			
+			//writeToTextFile.writeToTempTextFile(Line1, Line2, Line3, Line4, Line5, Line6);
 		}
 		else if (count==0)
 		{
 		//	WebDriver driver = BrowserFactory.getBrowser("chrome");		
 			String emailReportPathToSend = ExtentManager.finalPath;
+			emailReportPathToSend = "<"+emailReportPathToSend+"<";
 			//String mailContent = "User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend;
 			//System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,"Not Created","Not Created","Not Created","Not Created","Not Created");
