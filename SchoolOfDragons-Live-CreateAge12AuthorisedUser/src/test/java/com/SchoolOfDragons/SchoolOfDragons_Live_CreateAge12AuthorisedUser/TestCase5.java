@@ -180,7 +180,7 @@ public class TestCase5
 					
 					"\n\n ========================================================================================================"+
 					"\n\n There are issues authorising the user, please refer to the report mentioned below. Below are the details of the non Authorised user created : "+
-					"\n ========================================================================================================"+
+					"\n\n ========================================================================================================"+
 					"\n\n "+Line2+
 			        "\n\n "+Line3+
 			        "\n\n "+Line4+
@@ -231,8 +231,8 @@ public class TestCase5
             String mailContent ="You can refer to the below report path for the run result : (Please use Internet Explorer / Mozilla firefox / Google Chrome to view the report) \n"+emailReportPathToSend+
 					
 					"\n\n ========================================================================================================"+
-					"\n\n Authorised user has been created. You can refer to the below report for the run result. Below are the details of the Authorised user created : "+
-					"\n ========================================================================================================"+
+					"\n\n \033[32m \033[0;1m Authorised user has been created."+" You can refer to the below report for the run result. Below are the details of the Authorised user created : "+
+					"\n\n ========================================================================================================"+
 					"\n\n "+Line2+
 			        "\n\n "+Line3+
 			        "\n\n "+Line4+
