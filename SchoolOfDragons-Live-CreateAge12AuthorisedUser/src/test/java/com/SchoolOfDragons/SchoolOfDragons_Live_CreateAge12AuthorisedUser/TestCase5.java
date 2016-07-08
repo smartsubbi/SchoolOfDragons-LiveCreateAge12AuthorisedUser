@@ -179,7 +179,7 @@ public class TestCase5
 			String mailContent ="You can refer to the below report path for the run result : (Please use Internet Explorer / Mozilla firefox / Google Chrome to view the report) \n"+emailReportPathToSend+
 					
 					"\n\n ========================================================================================================"+
-					"\n\n There are issues authorising the user, please refer to the report mentioned below. Below are the details of the non Authorised user created : "+
+					"\n\n Non Authorised User has been Created [ Authorised User Creating Test Case : FAIL ] There are issues authorising the user, please refer to the report mentioned below. Below are the details of the non Authorised user created : "+
 					"\n\n ========================================================================================================"+
 					"\n\n "+Line2+
 			        "\n\n "+Line3+
@@ -234,17 +234,16 @@ public class TestCase5
             String mailContent ="You can refer to the below report path for the run result : (Please use Internet Explorer / Mozilla firefox / Google Chrome to view the report) \n"+emailReportPathToSend+
 					
 					"\n\n ========================================================================================================"+
-					"\n\n <p><font color='green'><b>Authorised user has been created.</b></p>"+" You can refer to the below report for the run result. Below are the details of the Authorised user created : "+
+					"\n\n ************************* Authorised user has been created [ Test Case : PASS ] ************************"+					
 					"\n\n ========================================================================================================"+
+					"\n\n .You can refer to the below report for the run result. Below are the details of the Authorised user created : "+
 					"\n\n "+Line2+
 			        "\n\n "+Line3+
 			        "\n\n "+Line4+
-			   //     "\n\n "+Line5+
-			        "\n\n "+Line6+textInBold;
+			        "\n\n "+Line6;
+            
 			String mailSubject = "School Of Dragons - Live - Create Age 12 Player (Authorized User)";
-			SendMailSSL.sendMail(mailContent, mailSubject);	
-			
-			//writeToTextFile.writeToTempTextFile(Line1, Line2, Line3, Line4, Line5, Line6);
+			SendMailSSL.sendMail(mailContent, mailSubject);
 		}
 		else if (count==0)
 		{
@@ -255,7 +254,7 @@ public class TestCase5
 			//System.out.println(mailContent);
 			//SendMail.sendMail(driver,subject,mailContent,"Not Created","Not Created","Not Created","Not Created","Not Created");
 			System.out.println("=====================================================================");
-			System.out.println("User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend);				
+			System.out.println(" User cannot be created as there are issues [ Test Case : FAIL ] You can refer to the below report for the run result\n"+emailReportPathToSend);				
 			System.out.println("=====================================================================");	
 			logger.log(LogStatus.INFO,"=====================================================================");
 			logger.log(LogStatus.INFO,"User cannot be created as there are issues You can refer to the below report for the run result\n"+emailReportPathToSend);				
